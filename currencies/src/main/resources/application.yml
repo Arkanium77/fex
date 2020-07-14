@@ -1,0 +1,32 @@
+hibernate.dialect: org.hibernate.dialect.H2Dialect
+spring:
+    datasource:
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:mem:catalog;
+        username: sa
+        password: sa
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                generate_statistics: true
+                order_inserts: true
+                order_updates: true
+                jdbc:
+                    batch_size: 20
+            format_sql: true
+    application:
+        name: currency-service
+
+currency-service:
+    main-currency-name: "RUB"
+    basic-properties:
+        username: testClient
+        password: ENC(79k4zGMVD+scmd7xn8YTv3P7J4rOffOm)
+
+jasypt:
+    encryptor:
+        bean: prop-encryption
+server:
+    port: 49000

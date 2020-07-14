@@ -1,0 +1,4 @@
+secure:
+    basic-properties:
+        username: testClient
+        password: ENC(79k4zGMVD+scmd7xn8YTv3P7J4rOffOm)
